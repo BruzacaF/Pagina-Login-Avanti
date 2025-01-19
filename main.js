@@ -7,7 +7,7 @@ function verificarEmail(email) {
 }
 
 function verificarSenha(senha) {
-    if (senha.length < 8) {
+    if (senha.length < 6) {
         return false;
     }
     return true;
@@ -22,6 +22,9 @@ const getEmail = () => document.getElementById('email').value;
 const getSenha = () => document.getElementById('senha').value;
 
 const validate = (email, senha) => {
+    if (!email || !senha) {
+        return false;
+    }
     return verificarEmail(email) && verificarSenha(senha);
 };
 

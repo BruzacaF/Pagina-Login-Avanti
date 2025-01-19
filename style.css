@@ -1,0 +1,180 @@
+
+
+
+/* Definição de Variaveis */
+
+
+:root{
+    --bg-color : #1a1a4a;
+
+
+    /* Variaveis Card Login */
+    --bg-card-login: #FBFCFF;
+    --border-color: #D0CCD0;
+    --detail-color: #e9f035;
+    --text-color-primary: #041925;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações Basicas */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+/* Card de login */
+
+.login-box{
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    box-shadow: rgba(59, 59, 59, 0.5) 0px 10px 20px;
+    border-radius: 10px;
+    background: var(--bg-card-login);
+    position: relative;
+}
+
+.login-box .title{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-color-primary);
+}
+
+
+.login-box .label{
+    text-align: left;
+    font-size: 1rem;
+    color: var(--text-color-primary);
+}
+
+.login-box .input-box{
+    margin-bottom: 10px;
+}
+
+.login-box input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+}
+
+
+.login-box input.error{
+    border-color: #dc3545 !important;
+    animation: border-animation 0.3s ease forwards;
+}
+
+.login-box input.success{
+    border-color: #28a745 !important;
+    animation: border-animation 0.3s ease forwards;
+}
+
+
+@keyframes border-animation {
+    0% {
+        border-color: var(--border-color);
+    }
+    100% {
+        border-color: #dc3545;
+    }
+    
+}
+
+
+.login-box input:focus {
+    border-color: var(--detail-color);
+    animation: border-animation 0.3s ease forwards;
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: var(--border-color);
+    }
+    100% {
+        border-color: var(--detail-color);
+    }
+}
+
+.login-box .btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: var(--detail-color);
+    border-radius: 5px;
+    
+    color: var(--text-color-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* Alerta De erro e sucesso */
+
+
+.alert{
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
+.alert.show{
+    display: block;
+}
+
+.alert .close{
+    float: right;
+    cursor: pointer;
+}
+
+.alert-success{
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger{
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+
+.btn-confirm-animation{
+    animation: confirm-animation 0.3s ease forwards;
+}
+
+
+@keyframes confirm-animation {
+    0% {
+        background: var(--detail-color);
+    }
+    100% {
+        background: #28a745;
+    }
+}
+
